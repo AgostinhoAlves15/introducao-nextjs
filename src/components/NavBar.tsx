@@ -1,11 +1,16 @@
 import Image from "next/image";
 
-interface date {
-  
+interface NavBarProps {
+    links: {
+      label: string
+      href: string
+    }[]
 }
 
+export default function NavBar({links}: NavBarProps){
 
-export default function NavBar(){
+
+
     return (
         <div className="">
     
@@ -13,7 +18,8 @@ export default function NavBar(){
             <nav className="bg-amber-200 shadow-sm">
                 <div className="text-lg font-medium">
                     <div className="flex justify-between h-16 items-center">
-    
+
+                        {/* Logo */}
                         <div className="flex items-center">
                           <Image 
                             src='https://www.svgrepo.com/show/354113/nextjs-icon.svg'
@@ -25,16 +31,17 @@ export default function NavBar(){
                           <span className="ml-4">NextApp</span>
                         </div>
     
+                        {/* Links */}
                         <div className="flex space-x-6">
-                          <a href="" className="text-lg font-bold hover:text-indigo-600">
-                            Inicio
-                          </a>
-                          <a href="" className="text-lg font-bold hover:text-indigo-600">
-                            Recursos
-                          </a>
-                          <a href="" className="text-lg font-bold hover:text-indigo-600">
-                            Contato
-                          </a>
+                            {
+                              links.map((link,índice) =>(
+                                  <a
+                                   key={índice}
+                                   href={link.href}
+                                   >{link.label}
+                                  </a>
+                              ))
+                            }
                         </div>
     
                     </div>
