@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import axios from "axios"
+import { Button } from "@/components/ui/button"
 
 type FormData = {
     title: string
@@ -74,6 +75,7 @@ const [ResponseData, setResponseData] = useState<ResponseData | null>(
           <button className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded w-full">
             Publicar
           </button>
+          <Button className="bg-amber-400 ">Clique Aquiiiii</Button>
         </form>
 
         {ResponseData &&(
