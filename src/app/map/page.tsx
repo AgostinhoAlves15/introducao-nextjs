@@ -1,5 +1,12 @@
-import Map from "@/components/ui/Map"
+'use client'
 
+//import Map from "@/components/ui/Map"
+import dynamic from "next/dynamic"
+
+const Map = dynamic(
+    ()=>import('@/components/ui/Map'),
+    {ssr:false}
+)
 
 export default function MapPage(){
     return(

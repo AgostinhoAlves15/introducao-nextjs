@@ -1,54 +1,52 @@
 import Image from "next/image";
 
 interface NavBarProps {
-  links: {
-    label: string
-    href: string
-  }[]
+    links: {
+        label: string;
+        href: string;
+    }[]
 }
 
-export default function NavBar({ links }: NavBarProps) {
 
+export default function NavBar({links}:NavBarProps) {
+    return (
+        <nav className="bg-amber-50 shadow-sm">
+            <div className="px-4">
+                <div className="flex justify-between h-16 items-center">
 
+                    {/* Logo */}
+                    <div className="flex items-center">
+                        <Image
+                            src="/nextjs-icon.svg"
+                            alt="logo nextjs"
+                            width={40}
+                            height={40}
+                        />
+                        <span className="ml-2">NextApp</span>
+                    </div>
 
-  return (
-    <div className="">
+                    {/* Links */}
+                    <div className="flex space-x-6">
+                        {
+                            links.map((link, indice)=>(
+                                <a 
+                                key={indice} 
+                                href={link.href}
+                                className=" text-lg
+                                    font-medium
+                                    hover:text-indigo-600"
+                                >
 
-      {/* navBar */}
-      <nav className="bg-amber-200 shadow-sm">
-        <div className="text-lg font-medium">
-          <div className="flex justify-between h-16 items-center">
+                                    {link.label}
+                                </a>
+                            ))
+                        }
+                    </div>
 
-            {/* Logo */}
-            <div className="flex items-center">
-              <Image
-                src='https://www.svgrepo.com/show/354113/nextjs-icon.svg'
-                width={40}
-                height={40}
-                alt="img"
-                className=""
-              />
-              <span className="ml-4">NextApp</span>
+                </div>
             </div>
+        </nav>
 
-            {/* Links */}
-            <div className="flex space-x-6">
-              {
-                links.map((link, índice) => (
-                  <a
-                    key={índice}
-                    href={link.href}
-                  >{link.label}
-                  </a>
-                ))
-              }
-            </div>
-
-          </div>
-        </div>
-      </nav>
-
-      <button><a href="/about">Sobre nós</a></button>
-    </div>
-  );
+    )
 }
+

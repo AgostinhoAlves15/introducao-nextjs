@@ -1,15 +1,12 @@
-import NavBar from "@/components/NavBar"
-export default function About() {
-    return (
+// import NavBar from "@/components/NavBar"
+
+export default function About(){
+
+    return(
         <div>
-            <NavBar links={[
-                    {label:'inicio', href:'/'},
-                    {label:'Sobre Nós', href:'/about'},
-                    {label:'Produtos', href:'products'}
-                  ]  
-                  }/>
+            {/* <NavBar label1="Produtos" label2="Adminitradores" label3="Time"/> */}
             <h1>Sobre nós</h1>
-            <p>Informações sobre a empresa...</p>
-        </div>
-    )
+            <p>Informações sobre a empresa ...</p>
+        </div>
+    )
 }

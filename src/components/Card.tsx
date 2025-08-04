@@ -1,27 +1,25 @@
-interface Cardprops {
-    comp: {
-        titulo: string
-        sub: string
-        icone: string
-    }[]
+
+interface cardPorps {
+    title: string,
+    description: string,
+    icon: string
 }
 
-export default function Card({ comp }: Cardprops) {
+export function Card({ title, description, icon }: cardPorps) {
     return (
-        <div className="flex flex-col items-center p-5 m-3">
-            <h1 className="text-xl font-black mb-6">Recursos Principais</h1>
 
-            <div className="flex justify-center space-x-10">
-                {comp.map((item, index) => (
-                    <div
-                        key={index}
-                        className="bg-gray-500 w-72 h-44 rounded-2xl p-4 text-white">
-                        <div className="p-3">{item.icone}</div>
-                        <h1 className="text-xl font-bold p-2">{item.titulo}</h1>
-                        <h3 className="text-sm p-2 text-black">{item.sub}</h3>
-                    </div>
-                ))}
-            </div>
+        <div className="
+        bg-violet-200 
+        p-6 rounded-xl 
+        hover:shadow-md transition duration-300"
+        >
+            <div className="text-4xl mb-4">{icon}</div>
+            <h3 className="
+            text-xl font-semibold text-gray-800 mb-2">
+                {title}
+            </h3>
+            <p className="text-gray-600">{description}</p>
+
         </div>
-    );
+    )
 }

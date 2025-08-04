@@ -1,8 +1,15 @@
-export default function Welcome() {
-    return (
-        <div className="bg-black items-center flex justify-center">
-            <p className="text-white">Bem-vindo à <span className="text-amber-200 font-bold">Home</span> Está é minha primeira página usando o Next.js</p>
+export default function Wellcome() {
 
-        </div>
-    )
+    return (
+        <div>
+            <h1>Bem-vindo(a) à Home</h1>
+            <p>
+                Esta é minha primeira página
+                em next.js
+            </p>
+
+            <button><a href="/about">About</a></button>
+
+        </div>
+    )
 }
