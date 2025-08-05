@@ -3,6 +3,47 @@
 import Button from "@/components/Button"
 import Card2 from "@/components/Card2"
 
+const cardData = [
+  {
+    title: "Ben 10",
+    description: "Desenho animado",
+    imgUrl: "/images/ben10.webp",
+    category: "Desenho"
+  },
+  {
+    title: "Homem de Ferro",
+    description: "Filme de ação",
+    imgUrl: "/images/ironMen.jpeg",
+    category: "Filme"
+  },
+  {
+    title: "Naruto",
+    description: "Anime ninja",
+    imgUrl: "/images/naruto.webp",
+    category: "Anime"
+  },
+  {
+    title: "Toy Story",
+    description: "Filme infantil",
+    imgUrl: "/images/compose.webp",
+    category: "Filme"
+  },
+  {
+    title: "Scooby-Doo",
+    description: "Desenho clássico",
+    imgUrl: "/images/doo.jpeg",
+    category: "Desenho"
+  },
+  {
+    title: "Dragon Ball",
+    description: "Anime de luta",
+    imgUrl: "/images/dbz.jpg",
+    category: "Anime"
+  },
+]
+
+
+
 export default function About(){
 
     return(
@@ -11,7 +52,17 @@ export default function About(){
             <h1>Sobre nós</h1>
             <p>Informações sobre a empresa ...</p>
             <Button label="click-ae"/>
-            <Card2 description="muito legal" imgUrl="/images/ben10.webp" title="Ben10" />
+            <div className="flex flex-wrap justify-center gap-4">
+      {cardData.map((item, index) => (
+        <Card2
+          key={index}
+          title={item.title}
+          description={item.description}
+          imgUrl={item.imgUrl}
+          category={item.category}
+        />
+      ))}
+    </div>
         </div>
     )
 }
