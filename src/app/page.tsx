@@ -1,11 +1,25 @@
+"use client"
+
 import { Card } from "@/components/Card";
 import NavBar from "@/components/NavBar";
+import CommentForm from "@/components/CommentForm";
+import CommentList from "@/components/CommentList";
+import { useState } from "react";
 // import PlaceForm from "@/components/PlaceForm";
 
-
-
+type Comentario = {
+  nome:string
+  mensagem:string
+  data:string
+}
 
 export default function Home() {
+  
+  const [comentarios,setComentarios] = useState<Comentario[]>([])
+  const adicionarComentario = (comentario: Comentario) =>{
+    setComentarios([...comentarios,comentario])
+  }
+
   return (
     <div className=" ">
 
@@ -46,7 +60,11 @@ export default function Home() {
         <PlaceForm lat={22} lng={-23}/>
       </div> */}
 
-
+      <div className="flex flex-col items-center justify-center">
+      <h1 className="text-3xl font-bold my-4">Sistema de Comentários</h1>
+      <CommentForm onSubmit={adicionarComentario} />
+      <CommentList comentarios={comentarios} />
+    </div>
     </div>
   );
 }
