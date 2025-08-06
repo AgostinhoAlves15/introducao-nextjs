@@ -2,6 +2,7 @@
 
 import Button from "@/components/Button"
 import Card2 from "@/components/Card2"
+import Counter from "@/components/Counter"
 
 const cardData = [
   {
@@ -62,6 +63,7 @@ export default function About(){
           category={item.category}
         />
       ))}
+      <Counter initial={0}/>
     </div>
         </div>
     )
