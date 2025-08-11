@@ -4,6 +4,7 @@ import { Card } from "@/components/Card";
 import NavBar from "@/components/NavBar";
 import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
+import EffectCounter from "@/components/EffectCounter";
 import { useState } from "react";
 // import PlaceForm from "@/components/PlaceForm";
 
@@ -64,7 +65,8 @@ export default function Home() {
       <h1 className="text-3xl font-bold my-4">Sistema de Comentários</h1>
       <CommentForm onSubmit={adicionarComentario} />
       <CommentList comentarios={comentarios} />
-    </div>
+      </div>
+      <EffectCounter/>
     </div>
   );
 }
