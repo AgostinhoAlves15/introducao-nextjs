@@ -6,6 +6,7 @@ import CommentForm from "@/components/CommentForm";
 import CommentList from "@/components/CommentList";
 import EffectCounter from "@/components/EffectCounter";
 import { useState } from "react";
+import Lampada from "@/components/Lampada";
 // import PlaceForm from "@/components/PlaceForm";
 
 type Comentario = {
@@ -67,6 +68,7 @@ export default function Home() {
       <CommentList comentarios={comentarios} />
       </div>
       <EffectCounter/>
+      <Lampada/>
     </div>
   );
 }
