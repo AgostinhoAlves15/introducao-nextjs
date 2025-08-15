@@ -5,7 +5,7 @@ import { useState } from "react"
 export default function MiniDisplay() {
 
     const [display, setDisplay] = useState("")
-
+    
     const backspace = () => {
         setDisplay(display.slice(0,-1))
     }
@@ -22,7 +22,8 @@ export default function MiniDisplay() {
             product()
         } else if(display.includes("/")) {
             division()
-        } else {
+        } else if (display){}
+         else {
             alert("Operação inválida")
         }
     }
@@ -76,7 +77,7 @@ export default function MiniDisplay() {
         <div className="flex flex-col items-center my-10">
             
             {/* display */}
-            <div className="flex justify-center overflow-x-auto
+            <div className="flex justify-center
                 items-center border border-gray-400 rounded 
                 p-2 w-40 h-14 text-center text-xl">
                 {display}
