@@ -1,6 +1,6 @@
 
 import ButtonMusic from "@/components/BotaoReproducao";
-import LikeButton from "@/components/LikeresButton";
+import LikeButton from "@/components/musicButton";
 
 export default function Filter() {
   const frutas = ["maçã", "melancia", "uva", "banana"];
