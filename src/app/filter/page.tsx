@@ -1,4 +1,5 @@
 
+import ButtonMusic from "@/components/BotaoReproducao";
 import LikeButton from "@/components/LikeresButton";
 
 export default function Filter() {
@@ -17,7 +18,8 @@ export default function Filter() {
   });
   console.log(result);
 
-  return <div>
+  return <div className="flex justify-center flex-col items-center">
     <LikeButton/>
+    <ButtonMusic/>
   </div>;
 }
