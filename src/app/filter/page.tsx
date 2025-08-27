@@ -1,5 +1,6 @@
 
 import ButtonMusic from "@/components/BotaoReproducao";
+import ListaDeCompras from "@/components/ListaDeCompras";
 import LikeButton from "@/components/musicButton";
 
 export default function Filter() {
@@ -21,5 +22,6 @@ export default function Filter() {
   return <div className="flex justify-center flex-col items-center">
     <LikeButton/>
     <ButtonMusic/>
+    <ListaDeCompras/>
   </div>;
 }
