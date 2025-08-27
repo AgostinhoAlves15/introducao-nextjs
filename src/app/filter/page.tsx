@@ -1,6 +1,6 @@
 
 import ButtonMusic from "@/components/BotaoReproducao";
-import ListaDeCompras from "@/components/ListaDeCompras";
+import ListaDeCompras from "@/components/ListCompras";
 import LikeButton from "@/components/musicButton";
 
 export default function Filter() {
