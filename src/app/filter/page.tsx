@@ -1,5 +1,5 @@
 
-import ButtonMusic from "@/components/BotaoReproducao";
+import ButtonMusic from "@/components/MusicATV";
 import ListaDeCompras from "@/components/ListCompras";
 import LikeButton from "@/components/musicButton";
 
